@@ -1,0 +1,127 @@
+{
+  "started_at": 1795169312.51129,
+  "credentials_present": true,
+  "model": "GigaChat",
+  "ok": true,
+  "passed": 9,
+  "total": 9,
+  "probes": [
+    {
+      "name": "atokens_count",
+      "ok": true,
+      "latency_ms": 1603,
+      "detail": {
+        "short": 8,
+        "long": 208
+      },
+      "error": ""
+    },
+    {
+      "name": "response_format",
+      "ok": true,
+      "latency_ms": 413,
+      "detail": {
+        "parsed": true,
+        "head": "{\"steps\": [{\"tool\": \"grep\"}]}",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 26,
+          "total_tokens": 171
+        }
+      },
+      "error": ""
+    },
+    {
+      "name": "context_overflow",
+      "ok": true,
+      "latency_ms": 551,
+      "detail": {
+        "recognised_as_overflow": true
+      },
+      "error": ""
+    },
+    {
+      "name": "rate_limit",
+      "ok": true,
+      "latency_ms": 1610,
+      "detail": {
+        "errors": [
+          "RateLimitError",
+          "RateLimitError"
+        ],
+        "saw_429": true,
+        "retry_after": null,
+        "note": "429 observed: the Retry-After branch is confirmed live"
+      },
+      "error": ""
+    },
+    {
+      "name": "react_plan",
+      "ok": true,
+      "latency_ms": 8031,
+      "detail": {
+        "strategy": "react",
+        "steps": 3,
+        "first_step": "read_structure: gigaforge/agents/harness_prompt.py",
+        "llm_calls": 2,
+        "localization": {}
+      },
+      "error": ""
+    },
+    {
+      "name": "repl_tool",
+      "ok": true,
+      "latency_ms": 3050,
+      "detail": {
+        "actions": [
+          "repl",
+          "finish"
+        ],
+        "used_repl": true,
+        "answer_in_observation": true,
+        "llm_calls": 2,
+        "finish_reason": "finish_action"
+      },
+      "error": ""
+    },
+    {
+      "name": "compaction",
+      "ok": true,
+      "latency_ms": 24068,
+      "detail": {
+        "compacted": true,
+        "finish_reason": "finish_action",
+        "steps": 8,
+        "llm_calls": 9,
+        "window": 4000,
+        "compactions": 10
+      },
+      "error": ""
+    },
+    {
+      "name": "checkpointer",
+      "ok": true,
+      "latency_ms": 5187,
+      "detail": {
+        "checkpoints": 6,
+        "db_bytes": 94208,
+        "llm_calls": 2,
+        "finish_reason": "max_steps"
+      },
+      "error": ""
+    },
+    {
+      "name": "goal_to_diff",
+      "ok": true,
+      "latency_ms": 14705,
+      "detail": {
+        "diff_chars": 206,
+        "diff_applied": true,
+        "repo_tests_pass": true,
+        "finish_reason": "",
+        "plan_used": true
+      },
+      "error": ""
+    }
+  ]
+}
